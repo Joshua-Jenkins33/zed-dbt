@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: Cleaned staging model for raw orders.
+    columns:
+      - name: order_id
+        description: Primary key for each order.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Identifier for the customer who placed the order.
+        tests:
+          - not_null
+      - name: ordered_at
+        description: Normalized order date.
+      - name: order_amount
+        description: Order amount in USD.

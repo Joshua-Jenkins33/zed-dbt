@@ -1,0 +1,14 @@
+zed_dbt_example:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: your_account
+      user: your_username
+      password: your_password
+      role: your_role
+      database: analytics
+      warehouse: transforming
+      schema: dbt_jjenkins
+      threads: 4
+      client_session_keep_alive: false
