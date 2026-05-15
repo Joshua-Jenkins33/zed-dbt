@@ -1,0 +1,12 @@
+[package]
+name = "sqlfmt-lsp"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal LSP wrapper that bridges textDocument/formatting to sqlfmt"
+
+[[bin]]
+name = "sqlfmt-lsp"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"

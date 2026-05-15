@@ -1,0 +1,11 @@
+id = "dbt"
+name = "dbt"
+description = "dbt SQL support for Zed: Jinja syntax highlighting and sqlfmt formatting"
+version = "0.1.0"
+schema_version = 1
+authors = ["Josh Jenkins"]
+repository = "https://github.com/jjenkins/zed-dbt"
+
+[language_servers.sqlfmt]
+name = "sqlfmt"
+language = "dbt"
