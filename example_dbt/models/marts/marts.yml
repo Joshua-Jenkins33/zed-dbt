@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_revenue
+    description: Daily revenue fact table built from staged orders.
+    columns:
+      - name: ordered_at
+        description: The business date for the revenue aggregate.
+        tests:
+          - not_null
+          - unique
+      - name: order_count
+        description: Number of orders placed on the date.
+      - name: revenue
+        description: Total revenue for the date.

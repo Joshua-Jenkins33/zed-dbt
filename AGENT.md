@@ -16,6 +16,7 @@ This project configures a development environment for dbt and SQL in Zed, with:
 - [x] Decide on a language to use for the Zed plugin — **Rust (compiled to WebAssembly)**. Zed extensions must be written in Rust using the `zed_extension_api` crate; there is no alternative.
 - [x] Build out a repository structure for the project
 - [x] Build out a basic plugin that allows you toggle running `sqlfmt` on save
+- [x] Add an example dbt project to this repository that I can use to test the plugin
 
 ## Semantic Versioning
 

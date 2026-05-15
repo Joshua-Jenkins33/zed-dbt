@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw
+    database: analytics
+    schema: raw
+    tables:
+      - name: orders
+        description: Raw order records loaded from the source application.
+        columns:
+          - name: order_id
+            description: Primary key from the source system.
+            tests:
+              - not_null
+              - unique
+          - name: customer_id
+            description: Foreign key to the customer who placed the order.
+            tests:
+              - not_null
+          - name: order_date
+            description: Date the order was placed.
+          - name: amount
+            description: Total amount of the order in USD.
