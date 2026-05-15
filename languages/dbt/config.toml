@@ -2,10 +2,11 @@ name = "dbt"
 grammar = "sql"
 path_suffixes = ["sql"]
 line_comments = ["-- "]
-block_comment = { start = "/*", end = "*/" }
-
-[brackets]
-[brackets.open]
-"(" = ")"
-"[" = "]"
-"{" = "}"
+block_comment = ["/*", "*/"]
+brackets = [
+    { start = "(", end = ")", close = true, newline = false },
+    { start = "[", end = "]", close = true, newline = false },
+    { start = "{", end = "}", close = true, newline = false },
+    { start = "'", end = "'", close = true, newline = false },
+    { start = "\"", end = "\"", close = true, newline = false },
+]
